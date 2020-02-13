@@ -2,9 +2,9 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 class Category(models.Model):
-    NAME_MAX_LENGTH = 128
+    N_Max_Length = 128
 
-    name = models.CharField(max_length=NAME_MAX_LENGTH, unique = True)
+    name = models.CharField(max_length=N_Max_Length, unique = True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     slug = models.SlugField(unique = True)
@@ -22,12 +22,10 @@ class Category(models.Model):
 
 class Page(models.Model):
 
-    TITLE_MAX_LENGTH = 128
-    URL_MAX_LENGTH = 200
-
+    T_Max_Length = 128
 
     category = models.ForeignKey(Category, on_delete = models.CASCADE)
-    title = models.CharField(max_length = TITLE_MAX_LENGTH)
+    title = models.CharField(max_length = T_Max_Length)
     url = models.URLField()
     views = models.IntegerField(default=0)
 
