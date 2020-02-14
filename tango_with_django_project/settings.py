@@ -36,6 +36,9 @@ ALLOWED_HOSTS = []
 # Chapter 9, login url
 LOGIN_URL = 'rango:login'
 
+#Chapter 10
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 
 # Application definition
 
